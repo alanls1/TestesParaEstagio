@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <section>
+        <p id="resposta2"></p>
+      </section>
+      <section>
+        <p id="resposta5"></p>
+      </section>
+    </div>
+
+    <script>
+      // Teste 2
+      const resposta2 = document.getElementById("resposta2");
+
+      function fibonacci(n) {
+        let fibonacciSequencia = [0, 1];
+
+        for (let i = 2; i < n; i++) {
+          fibonacciSequencia[i] =
+            fibonacciSequencia[i - 1] + fibonacciSequencia[i - 2];
+        }
+
+        return fibonacciSequencia.slice(0, n);
+      }
+
+      const sequence = fibonacci(10);
+
+      resposta2.innerHTML = `Fibonacci: ${sequence} , com o Valor 10.`;
+      // Teste 2
+
+      //   Teste 5
+      const resposta5 = document.getElementById("resposta5");
+      const string = "Hello Word";
+      const stringLength = string.length;
+      let palavraReversa = "";
+
+      for (let i = stringLength - 1; i >= 0; i--) {
+        console.log(i);
+        palavraReversa += string[i];
+      }
+
+      resposta5.innerHTML = `Palavra Reversa: ${palavraReversa} , com o Valor Hello Word para se livrar da maldição.`;
+
+      // Teste 5
+    </script>
+  </body>
+</html>
